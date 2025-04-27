@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Загородные дома мечты</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="fonts/comfortaa.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#hero">Главная</a> 
+    <a href="#houses">Дома</a> 
+    <a href="#reviews">Отзывы</a> 
+    <a href="#contact">Контакты</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <h1>Твой уютный дом за городом</h1>
+  <p>Выбирай лучший вариант по цене и площади!</p>
+</section>
+
+<section id="houses">
+  <h2>Наши предложения</h2>
+
+  <div class="filters">
+    <input type="number" id="minPrice" placeholder="Мин. цена (млн ₽)">
+    <input type="number" id="maxPrice" placeholder="Макс. цена (млн ₽)">
+    <input type="number" id="minArea" placeholder="Мин. площадь (м²)">
+    <input type="number" id="maxArea" placeholder="Макс. площадь (м²)">
+    <button onclick="filterHouses()">Показать дома</button>
+  </div>
+
+  <div class="houses" id="houseList">
+    <!-- Дома будут подгружаться скриптом -->
+  </div>
+</section>
+
+<section id="reviews" style="background:#f0faff;">
+  <h2>Отзывы клиентов</h2>
+  <div class="reviews">
+    <div class="review">
+      <p>«Быстро подобрали участок и построили дом мечты!»</p>
+      <strong>- Алексей</strong>
+    </div>
+    <div class="review">
+      <p>«Приятные цены и отличные варианты.»</p>
+      <strong>- Мария</strong>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:#ffffff;">
+  <h2>Связаться с нами</h2>
+  <p>Пишите на: realestate@example.com</p>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

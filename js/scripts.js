@@ -16,7 +16,7 @@ function displayHouses(list) {
   container.innerHTML = '';
   list.forEach(house => {
     container.innerHTML += 
-      <div class="house" data-aos="fade-up">
+      <div class="house">
         <img src="${house.image}" alt="${house.name}">
         <div class="info">
           <h3>${house.name}</h3>
