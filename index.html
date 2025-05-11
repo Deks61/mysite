@@ -115,62 +115,44 @@
       AOS.init();
     </script>
 
+
+
+<style>
+.toast-message {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #28a745;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(20px);
+  z-index: 1000;
+}
+.toast-message.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+</style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.contact form');
-  const successMessage = document.createElement('div');
-  successMessage.className = 'success-message';
-  successMessage.textContent = 'Спасибо! Мы скоро с вами свяжемся.';
-  successMessage.style.display = 'none';
-  successMessage.style.padding = '20px';
-  successMessage.style.marginTop = '15px';
-  successMessage.style.backgroundColor = '#d4edda';
-  successMessage.style.color = '#155724';
-  successMessage.style.border = '1px solid #c3e6cb';
-  successMessage.style.borderRadius = '12px';
-  form.parentElement.appendChild(successMessage);
+  const toast = document.createElement('div');
+  toast.className = 'toast-message';
+  toast.textContent = 'Спасибо! Мы скоро с вами свяжемся.';
+  document.body.appendChild(toast);
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     form.reset();
-    successMessage.style.display = 'block';
+    toast.classList.add('show');
     setTimeout(() => {
-      successMessage.style.display = 'none';
-    }, 4000);
-  });
-});
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.contact form');
-  const successMessage = document.createElement('div');
-  successMessage.className = 'success-message';
-  successMessage.textContent = 'Спасибо! Мы скоро с вами свяжемся.';
-  successMessage.style.display = 'none';
-  successMessage.style.padding = '20px';
-  successMessage.style.marginTop = '15px';
-  successMessage.style.backgroundColor = '#d4edda';
-  successMessage.style.color = '#155724';
-  successMessage.style.border = '1px solid #c3e6cb';
-  successMessage.style.borderRadius = '12px';
-  successMessage.style.transition = 'opacity 0.6s ease';
-  successMessage.style.opacity = '0';
-  form.parentElement.appendChild(successMessage);
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    form.reset();
-    successMessage.style.display = 'block';
-    setTimeout(() => {
-      successMessage.style.opacity = '1';
-    }, 10); // slight delay to trigger transition
-    setTimeout(() => {
-      successMessage.style.opacity = '0';
-      setTimeout(() => {
-        successMessage.style.display = 'none';
-      }, 600);
+      toast.classList.remove('show');
     }, 4000);
   });
 });
