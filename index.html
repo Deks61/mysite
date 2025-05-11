@@ -1,69 +1,60 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Загородные дома мечты</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="fonts/comfortaa.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/aos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мой сайт-портфолио</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <nav>
-    <a href="#hero">Главная</a> 
-    <a href="#houses">Дома</a> 
-    <a href="#reviews">Отзывы</a> 
-    <a href="#contact">Контакты</a>
-  </nav>
-</header>
+  <header class="animate__animated animate__fadeInDown">
+    <h1>Добро пожаловать!</h1>
+    <nav>
+      <a href="#about">Обо мне</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
 
-<section class="hero" id="hero">
-  <h1 data-aos="zoom-in">Твой уютный дом за городом</h1>
-  <p data-aos="fade-up">Выбирай лучший вариант по цене и площади!</p>
-</section>
+  <section id="about" class="about animate__animated animate__fadeIn">
+    <h2>Обо мне</h2>
+    <p>Привет! Меня зовут [ТВОЁ ИМЯ]. Я начинающий веб-разработчик, увлеченный созданием красивых и адаптивных сайтов.</p>
+  </section>
 
-<section id="houses">
-  <h2 data-aos="fade-up">Наши предложения</h2>
+  <section id="projects" class="projects animate__animated animate__fadeInUp">
+    <h2>Мои проекты</h2>
 
-  <div class="filters" data-aos="fade-up">
-    <input type="number" id="minPrice" placeholder="Мин. цена (млн ₽)">
-    <input type="number" id="maxPrice" placeholder="Макс. цена (млн ₽)">
-    <input type="number" id="minArea" placeholder="Мин. площадь (м²)">
-    <input type="number" id="maxArea" placeholder="Макс. площадь (м²)">
-    <button onclick="filterHouses()">Показать дома</button>
-  </div>
-
-  <div class="houses" id="houseList">
-    <!-- Дома будут подгружены скриптом -->
-  </div>
-</section>
-
-<section id="reviews" style="background:#f0faff;">
-  <h2 data-aos="fade-up">Отзывы клиентов</h2>
-  <div class="reviews">
-    <div class="review" data-aos="fade-up" data-aos-delay="100">
-      <p>«Быстро подобрали участок и построили дом мечты!»</p>
-      <strong>- Алексей</strong>
+    <div class="project-card">
+      <h3>Проект 1</h3>
+      <p>Описание первого проекта. Например, сайт-визитка, лендинг или интернет-магазин.</p>
+      <a href="#" class="btn">Посмотреть</a>
     </div>
-    <div class="review" data-aos="fade-up" data-aos-delay="300">
-      <p>«Приятные цены и отличные варианты.»</p>
-      <strong>- Мария</strong>
+
+    <div class="project-card">
+      <h3>Проект 2</h3>
+      <p>Описание второго проекта. Здесь можно указать технологии, которые ты использовал.</p>
+      <a href="#" class="btn">Посмотреть</a>
     </div>
-  </div>
-</section>
 
-<section id="contact" style="background:#ffffff;">
-  <h2 data-aos="fade-up">Связаться с нами</h2>
-  <p>Пишите на: realestate@example.com</p>
-</section>
+  </section>
 
-<script src="js/aos.js"></script>
-<script src="js/script.js"></script>
-<script>
-AOS.init({ duration: 1000, once: true });
-</script>
+  <section id="contact" class="contact animate__animated animate__fadeInUp">
+    <h2>Связаться со мной</h2>
+    <p>Заполните форму, и я свяжусь с вами как можно скорее.</p>
+    <form>
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="5" placeholder="Сообщение" required></textarea>
+      <button class="btn" type="submit">Отправить</button>
+    </form>
+  </section>
 
+  <footer>
+    © 2025 Твоё имя. Все права защищены.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
 </body>
 </html>
