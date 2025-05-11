@@ -3,58 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Мой сайт-портфолио</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Продажа Недвижимости</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <header class="animate__animated animate__fadeInDown">
-    <h1>Добро пожаловать!</h1>
-    <nav>
-      <a href="#about">Обо мне</a>
-      <a href="#projects">Проекты</a>
-      <a href="#contact">Контакты</a>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <h1>Недвижимость вашей мечты</h1>
+      <p>Покупка. Продажа. Аренда.</p>
+    </div>
   </header>
 
-  <section id="about" class="about animate__animated animate__fadeIn">
-    <h2>Обо мне</h2>
-    <p>Привет! Меня зовут [ТВОЁ ИМЯ]. Я начинающий веб-разработчик, увлеченный созданием красивых и адаптивных сайтов.</p>
-  </section>
-
-  <section id="projects" class="projects animate__animated animate__fadeInUp">
-    <h2>Мои проекты</h2>
-
-    <div class="project-card">
-      <h3>Проект 1</h3>
-      <p>Описание первого проекта. Например, сайт-визитка, лендинг или интернет-магазин.</p>
-      <a href="#" class="btn">Посмотреть</a>
+  <section class="about" data-aos="fade-up">
+    <div class="container">
+      <h2>О компании</h2>
+      <p>Мы предлагаем качественные услуги по продаже и аренде недвижимости более 10 лет.</p>
     </div>
+  </section>
 
-    <div class="project-card">
-      <h3>Проект 2</h3>
-      <p>Описание второго проекта. Здесь можно указать технологии, которые ты использовал.</p>
-      <a href="#" class="btn">Посмотреть</a>
+  <section class="catalog" data-aos="fade-up">
+    <div class="container">
+      <h2>Каталог недвижимости</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="img1.jpg" alt="Квартира" />
+          <h3>Квартира в центре</h3>
+          <p>10 млн ₽ — 2 спальни, 1 гостиная</p>
+        </div>
+        <div class="card">
+          <img src="img2.jpg" alt="Дом" />
+          <h3>Загородный дом</h3>
+          <p>25 млн ₽ — 3 спальни, сад, гараж</p>
+        </div>
+      </div>
     </div>
-
   </section>
 
-  <section id="contact" class="contact animate__animated animate__fadeInUp">
-    <h2>Связаться со мной</h2>
-    <p>Заполните форму, и я свяжусь с вами как можно скорее.</p>
-    <form>
-      <input type="text" placeholder="Ваше имя" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="5" placeholder="Сообщение" required></textarea>
-      <button class="btn" type="submit">Отправить</button>
-    </form>
+  <section class="reviews" data-aos="fade-up">
+    <div class="container">
+      <h2>Отзывы клиентов</h2>
+      <blockquote>“Отличный сервис! Нашли дом мечты за 2 недели.” — Анна</blockquote>
+    </div>
   </section>
 
-  <footer>
-    © 2025 Твоё имя. Все права защищены.
+  <section class="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Связаться с нами</h2>
+      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Ваше имя" required />
+        <input type="email" name="email" placeholder="Ваш email" required />
+        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="map" data-aos="fade-up">
+    <div class="container">
+      <h2>Мы на карте</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Агентство недвижимости</p>
+    </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
