@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Продажа Недвижимости</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Продажа недвижимости | Deks Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>Недвижимость вашей мечты</h1>
-      <p>Покупка. Продажа. Аренда.</p>
-    </div>
-  </header>
-
-  <section class="about" data-aos="fade-up">
-    <div class="container">
-      <h2>О компании</h2>
-      <p>Мы предлагаем качественные услуги по продаже и аренде недвижимости более 10 лет.</p>
-    </div>
-  </section>
-
-  <section class="catalog" data-aos="fade-up">
-    <div class="container">
-      <h2>Каталог недвижимости</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="img1.jpg" alt="Квартира" />
-          <h3>Квартира в центре</h3>
-          <p>10 млн ₽ — 2 спальни, 1 гостиная</p>
+    <header class="hero">
+        <div class="container">
+            <h1 data-aos="fade-down">Найди дом своей мечты</h1>
+            <p data-aos="fade-up">Широкий выбор квартир и домов по лучшим ценам</p>
+            <a href="#catalog" class="btn" data-aos="zoom-in">Посмотреть объекты</a>
         </div>
-        <div class="card">
-          <img src="img2.jpg" alt="Дом" />
-          <h3>Загородный дом</h3>
-          <p>25 млн ₽ — 3 спальни, сад, гараж</p>
+    </header>
+
+    <section class="about" id="about" data-aos="fade-up">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Мы — агентство недвижимости с опытом более 10 лет. Мы помогаем людям находить жильё мечты по честным ценам.</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="reviews" data-aos="fade-up">
-    <div class="container">
-      <h2>Отзывы клиентов</h2>
-      <blockquote>“Отличный сервис! Нашли дом мечты за 2 недели.” — Анна</blockquote>
-    </div>
-  </section>
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 data-aos="fade-up">Объекты недвижимости</h2>
+            <div class="cards">
+                <div class="card" data-aos="fade-right">
+                    <img src="images/house1.jpg" alt="Дом 1" />
+                    <h3>Коттедж в Сочи</h3>
+                    <p>250 м² • 4 спальни</p>
+                    <span>₽ 15 000 000</span>
+                </div>
+                <div class="card" data-aos="fade-up">
+                    <img src="images/apt1.jpg" alt="Квартира 1" />
+                    <h3>Квартира в Москве</h3>
+                    <p>70 м² • 2 спальни</p>
+                    <span>₽ 8 500 000</span>
+                </div>
+                <div class="card" data-aos="fade-left">
+                    <img src="images/house2.jpg" alt="Дом 2" />
+                    <h3>Дом в Казани</h3>
+                    <p>180 м² • 3 спальни</p>
+                    <span>₽ 10 000 000</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="contact" data-aos="fade-up">
-    <div class="container">
-      <h2>Связаться с нами</h2>
-      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Ваше имя" required />
-        <input type="email" name="email" placeholder="Ваш email" required />
-        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-        <button type="submit">Отправить</button>
-      </form>
-    </div>
-  </section>
+    <section class="reviews" data-aos="fade-up">
+        <div class="container">
+            <h2>Отзывы клиентов</h2>
+            <blockquote>Очень довольны! Купили дом мечты с их помощью. – <strong>Ирина и Алексей</strong></blockquote>
+            <blockquote>Профессиональная команда, всё быстро и прозрачно. – <strong>Владимир</strong></blockquote>
+        </div>
+    </section>
 
-  <section class="map" data-aos="fade-up">
-    <div class="container">
-      <h2>Мы на карте</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
+    <section class="contact" id="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Связаться с нами</h2>
+            <form>
+                <input type="text" placeholder="Ваше имя" required />
+                <input type="email" placeholder="Email" required />
+                <textarea placeholder="Ваше сообщение"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Агентство недвижимости</p>
-    </div>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>© 2025 Deks Estate | <a href="tel:+78001234567">Позвонить: 8 800 123 45 67</a></p>
+        </div>
+    </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
