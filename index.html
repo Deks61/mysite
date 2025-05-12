@@ -1,122 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Продажа недвижимости | Deks Estate</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-</head>
-<body>
-    <header class="hero">
-        <div class="container">
-            <h1 data-aos="fade-down">Найди дом своей мечты</h1>
-            <p data-aos="fade-up">Широкий выбор квартир и домов по лучшим ценам</p>
-            <a href="#catalog" class="btn" data-aos="zoom-in">Посмотреть объекты</a>
-        </div>
-    </header>
-
-    <section class="about" id="about" data-aos="fade-up">
-        <div class="container">
-            <h2>О нас</h2>
-            <p>Мы — агентство недвижимости с опытом более 10 лет. Мы помогаем людям находить жильё мечты по честным ценам.</p>
-        </div>
-    </section>
-
-    <section class="catalog" id="catalog">
-        <div class="container">
-            <h2 data-aos="fade-up">Объекты недвижимости</h2>
-            <div class="cards">
-                <div class="card" data-aos="fade-right">
-                    <img src="images/house1.jpg" alt="Дом 1" />
-                    <h3>Коттедж в Сочи</h3>
-                    <p>250 м² • 4 спальни</p>
-                    <span>₽ 15 000 000</span>
-                </div>
-                <div class="card" data-aos="fade-up">
-                    <img src="images/apt1.jpg" alt="Квартира 1" />
-                    <h3>Квартира в Москве</h3>
-                    <p>70 м² • 2 спальни</p>
-                    <span>₽ 8 500 000</span>
-                </div>
-                <div class="card" data-aos="fade-left">
-                    <img src="images/house2.jpg" alt="Дом 2" />
-                    <h3>Дом в Казани</h3>
-                    <p>180 м² • 3 спальни</p>
-                    <span>₽ 10 000 000</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="reviews" data-aos="fade-up">
-        <div class="container">
-            <h2>Отзывы клиентов</h2>
-            <div class="review-cards">
-                <div class="review-card">
-                    <img src="images/user1.jpg" alt="Ирина Петрова" />
-                    <h3>Ирина Петрова</h3>
-                    <p class="city">г. Ростов-на-Дону</p>
-                    <p class="text">“Очень довольны работой агентства. Всё честно и оперативно, подобрали идеальный дом!”</p>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="review-card">
-                    <img src="images/user2.jpg" alt="Владимир Сидоров" />
-                    <h3>Владимир Сидоров</h3>
-                    <p class="city">г. Самара</p>
-                    <p class="text">“Профессиональный подход. Ответили на все вопросы, показали реальные варианты.”</p>
-                    <div class="stars">⭐⭐⭐⭐</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-<section class="faq" data-aos="fade-up">
-  <div class="container">
-    <h2>Часто задаваемые вопросы</h2>
-    <div class="faq-item">
-      <h3>Сколько стоит оформление покупки?</h3>
-      <p>Услуги оформления входят в стоимость сделки. Дополнительных платежей нет.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Можно ли купить в ипотеку?</h3>
-      <p>Да, мы сотрудничаем с ведущими банками. Поможем оформить ипотеку на выгодных условиях.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Какие документы нужны для покупки?</h3>
-      <p>Паспорт, ИНН, подтверждение дохода. Мы подскажем полный список для конкретной ситуации.</p>
-    </div>
-  </div>
-</section>
-
-
-<section class="contact" id="contact" data-aos="fade-up">
-        <div class="container">
-            <h2>Связаться с нами</h2>
-            <form>
-                <input type="text" placeholder="Ваше имя" required />
-                <input type="email" placeholder="Email" required />
-                <textarea placeholder="Ваше сообщение"></textarea>
-                <button type="submit">Отправить</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Deks Estate | <a href="tel:+78001234567">Позвонить: 8 800 123 45 67</a></p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
-
-
+<html><body>
 <style>
 .toast-message {
   position: fixed;
@@ -141,15 +23,13 @@
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.contact form');
+  const form = document.querySelector('.contact-form');
   const toast = document.createElement('div');
   toast.className = 'toast-message';
   toast.textContent = 'Спасибо! Мы скоро с вами свяжемся.';
   document.body.appendChild(toast);
 
   form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    form.reset();
     toast.classList.add('show');
     setTimeout(() => {
       toast.classList.remove('show');
@@ -158,5 +38,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-</body>
-</html>
+</body></html>
