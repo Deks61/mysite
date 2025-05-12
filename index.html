@@ -1,41 +1,69 @@
-<html><body>
-<style>
-.toast-message {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #28a745;
-  color: white;
-  padding: 16px 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  transform: translateY(20px);
-  z-index: 1000;
-}
-.toast-message.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.contact-form');
-  const toast = document.createElement('div');
-  toast.className = 'toast-message';
-  toast.textContent = 'Спасибо! Мы скоро с вами свяжемся.';
-  document.body.appendChild(toast);
 
-  form.addEventListener('submit', function (e) {
-    toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 4000);
-  });
-});
-</script>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карта объектов</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2at/kjQzD2RQbK3LrLZACYoVGNzIsU2F9lEwxh4=" crossorigin=""/>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    .leaflet-popup-content { font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
 
-</body></html>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1j6kGSpzsY8p4XY4Rr5Yvexu1XFI1dV8Dtz+4PIo=" crossorigin=""></script>
+  <script>
+    const map = L.map('map').setView([55.75, 37.61], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap',
+      maxZoom: 18
+    }).addTo(map);
+
+    const properties = [
+      {
+        coords: [55.7522, 37.6010],
+        title: "Квартира в центре",
+        price: "8 500 000 ₽",
+        desc: "Просторная квартира рядом с метро"
+      },
+      {
+        coords: [59.7588, 30.4640],
+        title: "Дом у озера",
+        price: "12 000 000 ₽",
+        desc: "Уютный коттедж с видом на воду"
+      },
+      {
+        coords: [55.7958, 49.1066],
+        title: "Коммерческое помещение",
+        price: "18 000 000 ₽",
+        desc: "Отлично подойдёт под магазин или офис"
+      },
+      {
+        coords: [56.8380, 60.5970],
+        title: "Таунхаус",
+        price: "10 700 000 ₽",
+        desc: "Новостройка с паркингом"
+      },
+      {
+        coords: [43.5855, 39.7200],
+        title: "Апартаменты у моря",
+        price: "14 900 000 ₽",
+        desc: "Панорамный вид на побережье"
+      }
+    ];
+
+    properties.forEach(obj => {
+      L.marker(obj.coords)
+        .addTo(map)
+        .bindPopup(`<b>${obj.title}</b><br>${obj.price}<br>${obj.desc}`);
+    });
+  </script>
+</body>
+</html>
