@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Карта объектов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <h2>Карта объектов</h2>
+  <div id="filter">
+    <button onclick="filterMarkers('all')">Все</button>
+    <button onclick="filterMarkers('flat')">Квартиры</button>
+    <button onclick="filterMarkers('house')">Дома</button>
+    <button onclick="filterMarkers('commercial')">Коммерция</button>
+  </div>
+  <div id="map" style="height: 600px;"></div>
+  <script src="map.js"></script>
+</body>
+</html>

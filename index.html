@@ -1,15 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Главная - Недвижимость</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Недвижимость</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-    <h1>Добро пожаловать на сайт по недвижимости</h1>
+  <header>
+    <h1>Агентство Недвижимости</h1>
     <nav>
-        <a href="карта.html">Карта объектов</a>
+      <a href="index.html">Главная</a>
+      <a href="map.html">Карта объектов</a>
+      <a href="#about">О компании</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contact">Контакты</a>
     </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h2>Найдите свой идеальный дом</h2>
+      <p>Продажа, аренда и сопровождение сделок</p>
+    </section>
+
+    <section id="about">
+      <h2>О компании</h2>
+      <p>Мы помогаем найти жильё мечты по всей России.</p>
+    </section>
+
+    <section id="reviews">
+      <h2>Отзывы клиентов</h2>
+      <blockquote>Очень доволен работой агентства! — Ирина</blockquote>
+      <blockquote>Нашёл отличную квартиру! — Алексей</blockquote>
+    </section>
+
+    <section id="contact">
+      <h2>Связаться с нами</h2>
+      <form action="https://formspree.io/f/xnndgzrg" method="POST">
+        <input type="text" name="name" placeholder="Ваше имя" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Агентство Недвижимости</p>
+  </footer>
 </body>
 </html>
